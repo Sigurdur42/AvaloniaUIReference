@@ -1,0 +1,49 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+		Width="800"
+		Height="450"
+        x:Class="AvaloniaReference.MainWindow"
+		xmlns:local="clr-namespace:AvaloniaReference;assembly=AvaloniaReference"
+        Title="AvaloniaReference">
+
+	<Window.DataTemplates>
+		<DataTemplate DataType="{x:Type local:Section}">
+			<TabItem Header="{Binding Header}" Margin="0" Padding="0" />
+		</DataTemplate>
+	</Window.DataTemplates>
+
+	<!--<Window.DataTemplates>
+		<DataTemplate DataType="{x:Type local:Section}">
+			<TreeViewItem Header="{Binding Header}" Margin="0" Padding="0" 
+						  IsSelected="{Binding IsSelected}" />
+		</DataTemplate>
+	</Window.DataTemplates>
+
+	<Grid ColumnDefinitions="auto, 2, *">
+		<TreeView Grid.Column="0" Margin="5" SelectionMode="Single"
+				  x:Name="treeView"
+				  SelectionChanged="OnSelectionChanged"
+				  Items="{Binding Sections}">
+		</TreeView>
+
+		<GridSplitter ResizeDirection="Columns" Grid.Column="1" Background="Black" />
+		<Rectangle Grid.Column="2" Fill="Red" />
+	</Grid>-->
+
+	<TabControl TabStripPlacement="Left">
+		<TabItem Header="One">
+			<TextBlock>Content 1</TextBlock>
+		</TabItem>
+		<TabItem Header="Two">
+			<TextBlock>Content 2</TextBlock>
+		</TabItem>
+		<TabItem Header="Tree">
+			<TabControl TabStripPlacement="Left" Items="{Binding Sections}">
+				
+			</TabControl>
+		</TabItem>
+	</TabControl>
+</Window>
