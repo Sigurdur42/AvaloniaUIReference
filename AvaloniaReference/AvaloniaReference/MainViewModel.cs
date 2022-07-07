@@ -7,16 +7,9 @@ namespace AvaloniaReference
     {
         public MainViewModel()
         {
-            Sections = new[]
-            {
-                new Section{ Header ="Main"},
-                new Section{ Header ="Sub 1"},
-                new Section{ Header ="very long Sub 2"},
-            };
         }
 
+        public SelectedPage SelectedPage { get; } = new SelectedPage();
         public string Title { get; set; } = "Welcome Michael";
-
-        public Section[] Sections { get; }
     }
 }

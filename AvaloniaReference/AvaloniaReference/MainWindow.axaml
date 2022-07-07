@@ -6,6 +6,7 @@
 		Width="800"
 		Height="450"
         x:Class="AvaloniaReference.MainWindow"
+		xmlns:pages="clr-namespace:AvaloniaReference.Pages;assembly=AvaloniaReference"
 		xmlns:local="clr-namespace:AvaloniaReference;assembly=AvaloniaReference"
         Title="AvaloniaReference">
 
@@ -15,35 +16,20 @@
 		</DataTemplate>
 	</Window.DataTemplates>
 
-	<!--<Window.DataTemplates>
-		<DataTemplate DataType="{x:Type local:Section}">
-			<TreeViewItem Header="{Binding Header}" Margin="0" Padding="0" 
-						  IsSelected="{Binding IsSelected}" />
-		</DataTemplate>
-	</Window.DataTemplates>
-
 	<Grid ColumnDefinitions="auto, 2, *">
 		<TreeView Grid.Column="0" Margin="5" SelectionMode="Single"
 				  x:Name="treeView"
-				  SelectionChanged="OnSelectionChanged"
-				  Items="{Binding Sections}">
+				  SelectionChanged="OnSelectionChanged">
+			<TreeViewItem Header="Home" IsSelected="True"/>
+			<TreeViewItem Header="Controls" IsExpanded="True">
+				<TreeViewItem Header="Button" />
+			</TreeViewItem>
 		</TreeView>
 
 		<GridSplitter ResizeDirection="Columns" Grid.Column="1" Background="Black" />
-		<Rectangle Grid.Column="2" Fill="Red" />
-	</Grid>-->
 
-	<TabControl TabStripPlacement="Left">
-		<TabItem Header="One">
-			<TextBlock>Content 1</TextBlock>
-		</TabItem>
-		<TabItem Header="Two">
-			<TextBlock>Content 2</TextBlock>
-		</TabItem>
-		<TabItem Header="Tree">
-			<TabControl TabStripPlacement="Left" Items="{Binding Sections}">
-				
-			</TabControl>
-		</TabItem>
-	</TabControl>
+		<pages:PageHome Grid.Column="2" IsVisible="{Binding SelectedPage.IsHome}" />
+		<pages:PageButton Grid.Column="2" IsVisible="{Binding SelectedPage.IsButton}" />
+		<pages:PageControls Grid.Column="2" IsVisible="{Binding SelectedPage.IsControls}" />
+	</Grid>
 </Window>
