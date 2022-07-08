@@ -25,4 +25,12 @@
     <PackageReference Include="CommunityToolkit.Mvvm" Version="7.1.2" />
     <PackageReference Include="XamlNameReferenceGenerator" Version="1.3.4" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AvaloniaReferenceShared\AvaloniaReferenceShared.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\PageButton.axaml" />
+    <UpToDateCheckInput Remove="Pages\PageControls.axaml" />
+    <UpToDateCheckInput Remove="Pages\PageHome.axaml" />
+  </ItemGroup>
 </Project>

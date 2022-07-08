@@ -6,8 +6,8 @@
 		Width="800"
 		Height="450"
         x:Class="AvaloniaReference.MainWindow"
-		xmlns:pages="clr-namespace:AvaloniaReference.Pages;assembly=AvaloniaReference"
-		xmlns:local="clr-namespace:AvaloniaReference;assembly=AvaloniaReference"
+		xmlns:pages="clr-namespace:AvaloniaReference.Pages;assembly=AvaloniaReferenceShared"
+		xmlns:local="clr-namespace:AvaloniaReference;assembly=AvaloniaReferenceShared"
         Title="AvaloniaReference">
 
 	<Window.DataTemplates>
