@@ -5,5 +5,8 @@
         Home,
         Controls,
         Button,
+        Charts,
+        ChartDonut,
+        ChartLine,
     }
 }

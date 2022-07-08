@@ -9,6 +9,9 @@ namespace AvaloniaReference
 
         public bool IsButton => CurrentPage == AvailablePages.Button;
         public bool IsControls => CurrentPage == AvailablePages.Controls;
+        public bool IsCharts => CurrentPage == AvailablePages.Charts;
+        public bool IsChartDonut => CurrentPage == AvailablePages.ChartDonut;
+        public bool IsChartLine => CurrentPage == AvailablePages.ChartLine;
         public bool IsHome => CurrentPage == AvailablePages.Home;
 
         public void SetCurrentPage(AvailablePages page)
@@ -23,6 +26,9 @@ namespace AvaloniaReference
             OnPropertyChanged(nameof(IsHome));
             OnPropertyChanged(nameof(IsButton));
             OnPropertyChanged(nameof(IsControls));
+            OnPropertyChanged(nameof(IsCharts));
+            OnPropertyChanged(nameof(IsChartDonut));
+            OnPropertyChanged(nameof(IsChartLine));
         }
     }
 }

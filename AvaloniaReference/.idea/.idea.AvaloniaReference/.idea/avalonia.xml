@@ -5,7 +5,10 @@
       <map>
         <entry key="AvaloniaReference/MainWindow.axaml" value="AvaloniaReference/AvaloniaReference.csproj" />
         <entry key="AvaloniaReferenceShared/MainWindow.axaml" value="AvaloniaReference/AvaloniaReference.csproj" />
+        <entry key="AvaloniaReferenceShared/Pages/ChartLine.axaml" value="AvaloniaReference/AvaloniaReference.csproj" />
+        <entry key="AvaloniaReferenceShared/Pages/ChartsDonut.axaml" value="AvaloniaReference/AvaloniaReference.csproj" />
         <entry key="AvaloniaReferenceShared/Pages/PageButton.axaml" value="AvaloniaReference/AvaloniaReference.csproj" />
+        <entry key="AvaloniaReferenceShared/Pages/PageCharts.axaml" value="AvaloniaReference/AvaloniaReference.csproj" />
       </map>
     </option>
   </component>

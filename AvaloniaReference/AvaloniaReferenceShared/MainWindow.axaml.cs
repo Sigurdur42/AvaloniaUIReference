@@ -21,6 +21,9 @@ namespace AvaloniaReference
             {
                 "button" => AvailablePages.Button,
                 "controls" => AvailablePages.Controls,
+                "charts" => AvailablePages.Charts,
+                "donut" => AvailablePages.ChartDonut,
+                "line" => AvailablePages.ChartLine,
                 _ => AvailablePages.Home,
             };
             mainViewModel.SelectedPage.SetCurrentPage(page);
