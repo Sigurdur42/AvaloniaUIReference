@@ -9,7 +9,7 @@ namespace AvaloniaReference
         {
         }
 
-        public SelectedPage SelectedPage { get; } = new SelectedPage();
+        public SelectedPage SelectedPage { get; } = new ();
         public string Title { get; set; } = "Welcome Michael";
     }
 }

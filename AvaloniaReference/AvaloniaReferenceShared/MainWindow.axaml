@@ -10,12 +10,23 @@
         xmlns:local="clr-namespace:AvaloniaReference;assembly=AvaloniaReferenceShared"
         Title="AvaloniaReference">
 
-    <Window.DataTemplates>
-        <DataTemplate DataType="{x:Type local:Section}">
-            <TabItem Header="{Binding Header}" Margin="0" Padding="0" />
-        </DataTemplate>
-    </Window.DataTemplates>
+  
 
+    <TabControl TabStripPlacement="Left">
+        <TabItem Header="Home"></TabItem>
+        <TabItem Header="Controls"></TabItem>
+        <TabItem Header="Charts">
+            <TabControl TabStripPlacement="Top">
+                <TabItem Header="Donut"></TabItem>
+                <TabItem Header="Line">
+                    <pages:PageChartLine HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                </TabItem>
+            </TabControl>
+        </TabItem>
+      
+    </TabControl>
+    
+    <!-- 
     <Grid ColumnDefinitions="auto, 2, *">
         <TreeView Grid.Column="0" Margin="5" SelectionMode="Single"
                   x:Name="treeView"
@@ -33,14 +44,15 @@
         <GridSplitter ResizeDirection="Columns" Grid.Column="1" Background="Black" />
 
         <ScrollViewer Grid.Column="2" Margin="5,0,5,0">
-            <Grid>
+            <StackPanel>
                 <pages:PageHome IsVisible="{Binding SelectedPage.IsHome}" />
                 <pages:PageButton IsVisible="{Binding SelectedPage.IsButton}" />
                 <pages:PageControls IsVisible="{Binding SelectedPage.IsControls}" />
                 <pages:PageCharts IsVisible="{Binding SelectedPage.IsCharts}" />
                 <pages:PageChartDonut IsVisible="{Binding SelectedPage.IsChartDonut}" />
                 <pages:PageChartLine IsVisible="{Binding SelectedPage.IsChartLine}" />
-            </Grid>
+            </StackPanel>
         </ScrollViewer>
     </Grid>
+    -->
 </Window>

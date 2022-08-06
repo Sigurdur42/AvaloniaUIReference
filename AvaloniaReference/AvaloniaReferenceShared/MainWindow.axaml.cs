@@ -4,7 +4,7 @@ namespace AvaloniaReference
 {
     public partial class MainWindow : Window
     {
-        private MainViewModel mainViewModel = new MainViewModel();
+        private readonly MainViewModel mainViewModel = new();
 
         public MainWindow()
         {
